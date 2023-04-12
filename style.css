@@ -1,0 +1,438 @@
+/* ? No-related enviroment ---------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    background-color: black;
+    -webkit-user-select: none; /* for Safari */
+    user-select: none;
+
+    overflow: hidden;
+}
+
+.mid{
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+    /* ? Scroll Bar Custom ---------- */
+.section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.section::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.section::-webkit-scrollbar-track {
+    background-color: rgb(78, 78, 78);
+}
+
+.section {
+    scrollbar-width: thin;
+}
+
+/* *Font evm ---------- */ 
+@font-face {
+    font-family: 'FS Story Brush';
+    src: url("./font/FS\ Story\ Brush\ Regular.otf") format("opentype");
+}
+
+/* ? header css ---------- */
+.header{
+    margin-top: 8vh;
+    width: 100%;
+
+    color: red;
+    font-size: 30px;
+
+    font-family: "FS Story Brush", Verdana, Tahoma;
+
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+
+/* ? main_1 css ---------- */
+.audio{
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    
+}
+
+.audio:hover{
+    opacity: 0.1;
+}
+
+.main_1{
+    width: 100%;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+
+.main_1_text{
+    width: 40%;
+    float: left;
+
+
+    font-size: 30px;
+    color: rgba(255, 0, 0, 0);
+
+
+    font-family: "FS Story Brush", Verdana, Tahoma;
+
+    text-align: left;
+    letter-spacing: 2.5px;
+}
+
+
+
+/* ! DANGER ZONE ---------- */
+/* * TEXT TRANSFORM ---------- */
+
+@keyframes imgShow {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes imgMove {
+    from{
+        width: 20%;
+        text-align: right;
+    }
+    to{
+        width: 55%;
+    }
+}
+
+@keyframes Shake {
+    0%{
+        margin-right: 2px;
+    }
+    25%{
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+    50%{
+        margin-bottom: 2px;
+        margin-right: 2px;
+    }
+    75%{
+        margin-right: 2px;
+    }
+    100%{
+        margin-left: 2px;
+    }
+}
+
+@keyframes off {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes blurText {
+    from{
+        filter: blur(5px);
+        opacity: 0;
+    }
+    to{
+        filter: none;
+        opacity: 1;
+    }
+}
+
+.h_1{
+    animation: Shake 0.5s 1s linear infinite backwards,
+                blurText 1s 1s linear backwards;
+}
+
+.m_1_img_1{
+    width: 55%;
+    text-align: right;
+    box-shadow: 1px 2px 8px 7px rgb(63, 63, 63);
+    animation: imgShow 3s 2s linear backwards,
+                imgMove 1.5s 2s linear backwards,
+                Shake 0.5s 3s linear infinite backwards;
+}
+
+/*  *.....*/
+@keyframes textShake {
+    0%{
+        margin-left: 2px;
+    }
+    25%{
+        margin-top: 2px;
+    }
+    50%{
+        margin-left: 2px;
+    }
+    75%{
+        margin-left: 2px;
+    }
+    100%{
+        margin-right: 2px;
+    }
+}
+
+@keyframes colorTextChangingForwards {
+    from{
+        color: rgba(255, 0, 0, 0);
+    }
+    to{
+        color: rgb(255, 0, 0);
+    }
+}
+
+@keyframes colorTextChangingBackwards {
+    0%{
+        color: rgb(255, 0, 0);
+    }
+    50%{
+        color: rgba(255, 0, 0, 0);
+        display: none;
+    }
+    100%{
+        position: fixed;
+        color: rgba(255, 0, 0, 0);
+    }
+}
+
+
+.m_1_par_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 5s linear forwards,
+                colorTextChangingBackwards 2s 12s linear forwards;
+}
+
+.m_1_par_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 14s linear forwards,
+                colorTextChangingBackwards 2s 20s linear forwards;
+}
+
+.m_1_par_3{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 22s linear forwards,
+                colorTextChangingBackwards 2s 30s linear forwards;
+}
+
+.m_1_par_4{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 32s linear forwards,
+                colorTextChangingBackwards 2s 39s linear forwards;
+}
+
+.m_1_par_5_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 41s linear forwards,
+                colorTextChangingBackwards 2s 54s linear forwards;
+}
+
+.m_1_par_5_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 47.5s linear forwards,
+                colorTextChangingBackwards 2s 54s linear forwards;
+}
+
+.m_1_par_6_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 58s linear forwards,
+                colorTextChangingBackwards 2s 72s linear forwards;
+}
+
+.m_1_par_6_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 65s linear forwards,
+                colorTextChangingBackwards 2s 72s linear forwards;
+}
+
+.m_1_par_7{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 74s linear forwards,
+                colorTextChangingBackwards 2s 81s linear forwards;
+}
+
+.m_1_par_8{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 83s linear forwards,
+                colorTextChangingBackwards 2s 90s linear forwards;
+}
+
+.m_1_par_9{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 92s linear forwards,
+                colorTextChangingBackwards 2s 98s linear forwards;
+}
+
+.m_1_par_10_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 100s linear forwards,
+                colorTextChangingBackwards 2s 118s linear forwards;
+}
+
+.m_1_par_10_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 109s linear forwards,
+                colorTextChangingBackwards 2s 118s linear forwards;
+}
+
+.m_1_par_11_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 120s linear forwards,
+                colorTextChangingBackwards 2s 132s linear forwards;
+}
+
+.m_1_par_11_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 126s linear forwards,
+                colorTextChangingBackwards 2s 132s linear forwards;
+}
+
+.m_1_par_12{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 134s linear forwards,
+                colorTextChangingBackwards 2s 139s linear forwards;
+}
+
+.m_1_par_13{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 141s linear forwards,
+                colorTextChangingBackwards 2s 149s linear forwards;
+}
+.m_1_par_14{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 151s linear forwards,
+                colorTextChangingBackwards 2s 158s linear forwards;
+}
+.m_1_par_15{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 160s linear forwards,
+                colorTextChangingBackwards 2s 167s linear forwards;
+}
+.m_1_par_16{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 169s linear forwards,
+                colorTextChangingBackwards 2s 176s linear forwards;
+}
+
+.m_1_par_17_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 178s linear forwards,
+                colorTextChangingBackwards 2s 192s linear forwards;
+}
+
+.m_1_par_17_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 185s linear forwards,
+                colorTextChangingBackwards 2s 192s linear forwards;
+}
+
+.m_1_par_18{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 194s linear forwards,
+                colorTextChangingBackwards 2s 200s linear forwards;
+}
+
+.m_1_par_19_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 202s linear forwards,
+                colorTextChangingBackwards 2s 216s linear forwards;
+}
+
+.m_1_par_19_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 209s linear forwards,
+                colorTextChangingBackwards 2s 216s linear forwards;
+}
+
+.m_1_par_20{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 218s linear forwards,
+                colorTextChangingBackwards 2s 224s linear forwards;
+}
+
+.m_1_par_21{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 226s linear forwards,
+                colorTextChangingBackwards 2s 233s linear forwards;
+}
+
+.m_1_par_22{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 235s linear forwards,
+                colorTextChangingBackwards 2s 242s linear forwards;
+}
+
+.m_1_par_23{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 244s linear forwards,
+                colorTextChangingBackwards 2s 250s linear forwards;
+}
+
+.m_1_par_24{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 252s linear forwards,
+                colorTextChangingBackwards 2s 257s linear forwards;
+}
+
+.m_1_par_25{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 259s linear forwards,
+                colorTextChangingBackwards 2s 266s linear forwards;
+}
+
+.m_1_par_26{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 268s linear forwards,
+                colorTextChangingBackwards 2s 275s linear forwards;
+}
+
+.m_1_par_27{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 277s linear forwards,
+                colorTextChangingBackwards 2s 285s linear forwards;
+}
+
+.m_1_par_28_1{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 287s linear forwards,
+                colorTextChangingBackwards 2s 303s linear forwards;
+}
+
+.m_1_par_28_2{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 294s linear forwards,
+                colorTextChangingBackwards 2s 303s linear forwards;
+}
+
+.m_1_par_29{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 305s linear forwards,
+                colorTextChangingBackwards 2s 312s linear forwards;
+}
+
+.m_1_par_30{
+    animation: textShake 0.5s 3s linear infinite backwards,
+                colorTextChangingForwards 3s 314s linear forwards;
+}
+
+
+
+
+
+
+
+
